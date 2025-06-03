@@ -1,31 +1,31 @@
-- name: Gitio Hamano
-  function: Source Code version controller
+- name: Grace W.
+  function: Achieved Independence
   image: /uploads/photos/avatars/1.jpeg
-  description: Rings of Uranus hearts of the stars corpus callosum invent the universe take root and flourish concept of the number one.
+  description: Learning with Stephen was genuinely a fantastic experience. I was so nervous at first, but his calm and patient approach made all the difference. I passed my test on the first try, and I couldn't have done it without him!
   stars: 5
-- name: Rasmus Phorfp
-  function: All Stacks developer 
+- name: Kevin M.
+  function: Confident Driver
   image: /uploads/photos/avatars/2.jpeg
-  description: Finite but unbounded astonishment two ghostly white figures in coveralls and helmets are softly dancing billions upon billions Vangelis Hypatia. 
+  description: Highly recommend Stephen! The lessons were always well-structured and incredibly informative. We focused not just on passing the test, but on making me a truly safe and confident driver for life. Best decision I made!" 
   stars: 5
-- name: Madogg Kabul
-  function: Keyboard Guru
+- name: Sarah K.
+  function: Conquered Nerves
   image: /uploads/photos/avatars/3.jpeg
-  description: Hypatia globular star cluster explorations the ash of stellar alchemy rings of Uranus a still more glorious dawn awaits.
+  description: I came here after a bad experience with another school, and the difference was night and day. His patience and clear explanations rebuilt my confidence completely. Thank you for making driving enjoyable and stress-free!
   stars: 5
-- name: Kenny Thompson
-  function: Nix architect
-  image: /uploads/photos/avatars/4.jpeg
-  description: Extraordinary claims require extraordinary evidence how far away a very small stage in a vast cosmic arena something incredible is waiting to be known concept of the number one not a sunrise but a galaxyrise.
-  stars: 5
-- name: Linus O'Callaghan
-  function: Systems Administrator
-  image: /uploads/photos/avatars/5.jpeg
-  description: Descended from astronomers stirred by starlight circumnavigated colonies dispassionate extraterrestrial observer a very small stage in a vast cosmic arena.
-  stars: 5
-- name: Ada Lovelace
-  function: Alma (cyber)Mater
-  image: /uploads/photos/avatars/6.jpeg
-  description:  The carbon in our apple pies Drake Equation the only home we've ever known the ash of stellar alchemy Drake Equation star stuff harvesting star light?
-  stars: 4
+#- name: Kenny Thompson
+#  function: Nix architect
+#  image: /uploads/photos/avatars/4.jpeg
+#  description: Extraordinary claims require extraordinary evidence how far away a very small stage in a vast cosmic arena something incredible is waiting to be known concept of the number one not a sunrise but a galaxyrise.
+#  stars: 5
+#- name: Linus O'Callaghan
+#  function: Systems Administrator
+#  image: /uploads/photos/avatars/5.jpeg
+#  description: Descended from astronomers stirred by starlight circumnavigated colonies dispassionate extraterrestrial observer a very small stage in a vast cosmic arena.
+#  stars: 5
+#- name: Ada Lovelace
+#  function: Alma (cyber)Mater
+#  image: /uploads/photos/avatars/6.jpeg
+#  description:  The carbon in our apple pies Drake Equation the only home we've ever known the ash of stellar alchemy Drake Equation star stuff harvesting star light?
+#  stars: 4
 
