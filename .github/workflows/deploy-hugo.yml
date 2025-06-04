@@ -31,6 +31,19 @@ jobs:
           hugo-version: 'latest' # You can specify a version, e.g., '0.128.0'
           extended: true # Use the extended version of Hugo (for Sass/SCSS)
 
+      # --- NEW DIAGNOSTIC STEP ---
+      - name: Show Hugo base URL and config
+        run: |
+          echo "--- Hugo config output ---"
+          hugo config | grep 'baseURL'
+          echo "--- HUGO_BASEURL environment variable ---"
+          echo "HUGO_BASEURL: ${{ env.HUGO_BASEURL }}"
+        env:
+          # IMPORTANT: Ensure this matches the HUGO_BASEURL in your 'Build Hugo site' step
+          HUGO_ENVIRONMENT: production
+          HUGO_BASEURL: "https://liz-w-kariuki.github.io/stephen-site/" # <--- MAKE SURE THIS IS EXACTLY CORRECT
+      # --- END NEW DIAGNOSTIC STEP ---  
+
       - name: Cache Hugo modules and build cache
         uses: actions/cache@v4 # Ensure this is v4 or later
         with:
