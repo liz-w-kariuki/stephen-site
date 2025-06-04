@@ -41,7 +41,7 @@ jobs:
         working-directory: './' # Explicitly set working directory to repository root
         env:
           HUGO_ENVIRONMENT: production
-          HUGO_BASEURL: "https://liz-w-kariuki.github.io/stephen-site/" # Ensure this matches your actual URL
+          HUGO_BASEURL: "https://liz-w-kariuki.github.io/" # Ensure this matches your actual URL
       # --- END DIAGNOSTIC STEP ---  
 
       - name: Cache Hugo modules and build cache
