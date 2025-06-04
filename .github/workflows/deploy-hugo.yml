@@ -43,7 +43,7 @@ jobs:
         run: hugo --minify # Build your Hugo site, minify output
         env:
           HUGO_ENVIRONMENT: production # Set Hugo environment to production
-          HUGO_BASEURL: "https://liz-w-kariuki.github.io/stephen-site/" # **IMPORTANT: Replace with your actual GitHub Pages URL**
+          HUGO_BASEURL: "https://liz-w-kariuki.github.io/stephen-site/"  # **IMPORTANT: Replace with your actual GitHub Pages URL**
 
       - name: Setup Pages
         uses: actions/configure-pages@v5 # **UPDATE THIS TO v5 or later**
