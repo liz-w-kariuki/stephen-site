@@ -1,0 +1,61 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+permissions:
+  contents: write # Needed to push to the gh-pages branch
+  pages: write # Needed for GitHub Pages deployment
+  id-token: write # Needed for OIDC authentication by actions/deploy-pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # Checkout submodules (for themes)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3 # Use a popular action to set up Hugo
+        with:
+          hugo-version: 'latest' # You can specify a version, e.g., '0.128.0'
+          extended: true # Use the extended version of Hugo (for Sass/SCSS)
+
+      - name: Cache Hugo modules and build cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/hugo_cache # Cache Hugo's build directory
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Build Hugo site
+        run: hugo --minify # Build your Hugo site, minify output
+        env:
+          HUGO_ENVIRONMENT: production # Set Hugo environment to production
+          HUGO_BASEURL: "https://liz-w-kariuki.github.io/stephen-site/" 
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5 # Configure GitHub Pages environment
+        id: pages
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4 # Upload the public directory as an artifact
+        with:
+          path: ./public # Path to your generated static site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Deploy the artifact to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is automatically provided
